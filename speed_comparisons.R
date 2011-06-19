@@ -18,10 +18,13 @@ logit.estimator(choices)
 end.time <- Sys.time()
 mle.3 <- end.time - start.time
 
+source('mle_4.R')
+start.time <- Sys.time()
+logit.estimator(choices)
+end.time <- Sys.time()
+mle.4 <- end.time - start.time
+
 print(mle.1)
 print(mle.2)
 print(mle.3)
-
-print((as.numeric(mle.2) / as.numeric(mle.1)) * 100)
-print((as.numeric(mle.3) / as.numeric(mle.1)) * 100)
-print((as.numeric(mle.3) / as.numeric(mle.2)) * 100)
+print(mle.4)
